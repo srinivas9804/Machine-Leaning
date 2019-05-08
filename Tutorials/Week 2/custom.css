@@ -1,0 +1,213 @@
+/*Some css style for CS4487 slides*/
+
+/*
+body {
+background-color: #111111;
+}
+.reveal p {
+color: white;
+}
+.reveal ul, ol {
+color: white;
+}
+div.output_area pre {
+color: white;
+}
+div.output_stderr {  
+background: #F00;
+}
+.reveal table th, .reveal table td {
+color: white;
+}
+*/
+
+
+/* slide title */
+.reveal h1 {
+	font-size: 40pt;
+	line-height: 100%;
+	text-align: center;
+}
+.reveal h2,h3 {
+  text-align: center;
+}
+
+/* for all lists set right margin to 0 */
+.reveal ul {
+  margin-right: 0em;
+}
+.reveal ol {
+  margin-right: 0em;
+  margin-top:   0em;
+}
+
+/* 1st-level list item */
+.reveal li {
+	font-size: 26pt;
+	line-height: 100%;
+	margin-top: 0.75em;
+}
+
+/* 2nd-level list item */
+.reveal li li {
+	font-size: 23pt;
+	line-height: 100%;
+	margin-top: 0.2em
+}
+
+/* 3rd-level list item */
+.reveal li li li {
+	font-size: 20pt;
+	line-height: 100%;
+}
+
+/* 4th-level list item */
+.reveal li li li li {
+	font-size: 18pt;
+	line-height: 100%;
+}
+
+
+/* code terminal (black) */
+/*.reveal pre {
+  	background-color: black;
+}
+.reveal code {
+	background: black;
+  	background-color: black;
+	color: white;
+}
+*/
+
+/* code syntax-colored (white)*/
+.highlight pre {
+  	background-color: white;
+}
+div.highlight {
+	border: 1px solid black;
+}
+
+/* page layout - put bullets and title furthest left*/
+div.text_cell div.input_prompt {
+	width: 0px;
+	min-width: 0px;
+}
+
+/* code cells - indent, and increase font size*/
+div.code_cell {
+/*	margin-left: 50px;*/
+	font-size: 18pt;
+}
+/* fix alignment of "Out" */
+div.output_prompt {
+	margin: 0px 0px 0px 0px;
+}
+
+/* fix blockquote */
+.reveal blockquote {
+  width: inherit;
+}
+
+
+/** for handouts **********************************************************/
+
+
+/* section borders */
+section {
+  border-top-style: solid;
+  border-top-color: black;
+  border-top-width: 1px;
+}
+
+section section {
+  border-top-style: solid;
+  border-top-color: lightgray;
+  border-top-width: 0.5px;
+}
+
+/* for printing handouts */
+@media print {
+  /* prevent breaks in content */
+
+  /* each slide */
+  /*section{page-break-inside:avoid}*/
+  
+  /* each notebook cell */
+  /*div.cell{page-break-inside:avoid; page-break-before:avoid}*/
+    
+  /* prevent page breaks after headers */
+  h1,h2,h3,h4,h5,h6 {page-break-after:avoid}
+  
+  /* prevent page breaks that break up lists */
+  li li {page-break-before:avoid}
+  li li li {page-break-before:avoid}
+  li li li li {page-break-before:avoid}
+  
+  /*br {page-break-before:avoid; page-break-after:avoid}*/
+  /*  tr {page-break-inside:avoid} */
+  /*  td {page-break-inside:avoid} */
+
+  /* in code blocks */
+  /* div.code_cell {page-break-inside:avoid; page-break-before:avoid} */
+  
+  
+  /* @page {size: landscape} */
+  
+  /*  
+  img { max-width:50%; }
+  svg { width:75%; height:75%; 
+        transform:scale(0.75); 
+       -webkit-transform:scale(0.75); 
+       -moz-transform:scale(0.75); 
+       -ms-transform:scale(0.75); 
+       -o-transform:scale(0.75)}
+  */
+  
+  /* change fonts */
+  .reveal h1 {
+    font-size: 16pt;
+    line-height: 100%;
+    text-align: center;
+  }
+  .reveal h2,h3 {
+    font-size: 14pt;
+    text-align: center;
+  }
+  .reveal h3 {
+    font-size: 14pt;
+  }
+
+  /* 1st-level list item */
+  .reveal li {
+    font-size: 12pt;
+    line-height: 100%;
+    margin-top: 0.5em;
+  }
+
+  /* 2nd-level list item */
+  .reveal li li {
+    font-size: 11pt;
+    line-height: 100%;
+    margin-top: 0.1em
+  }
+
+  /* 3rd-level list item */
+  .reveal li li li {
+    font-size: 11pt;
+    line-height: 100%;
+  }
+
+  /* 4th-level list item */
+  .reveal li li li li {
+    font-size: 11pt;
+    line-height: 100%;
+  }
+  
+  div.code_cell {
+/*	margin-left: 50px;*/
+	font-size: 11pt;
+	}
+	
+}
+
+
